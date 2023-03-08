@@ -1,2 +1,1 @@
-# alx-system_engineering-devops
-shell,basics project
+system devops
