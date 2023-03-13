@@ -1,1 +1,1 @@
-My first readme  redirection
+Hello, World Script
