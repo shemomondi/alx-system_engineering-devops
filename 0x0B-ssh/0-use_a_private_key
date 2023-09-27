@@ -1,11 +1,3 @@
-#!/bin/bash
-
-# Define the SSH private key file
-private_key="/home/shemomondi/.ssh/school"
-
-# Define the remote server and username
-remote_server="ubuntu@your_server_ip_or_hostname"
-
-# Use ssh with single-character flags to connect using the private key
-ssh -i "$private_key" "$remote_server"
-
+#!/usr/bin/env bash
+#connect to my school server
+ssh -i /.ssh/school ubuntu954.122.341.23
