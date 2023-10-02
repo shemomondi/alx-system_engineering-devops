@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
-# script to install and setup nginx
+# Installs a webserver, nginx.
+#!/usit must return a page that contains the string `Hello World!`
+
 apt-get -y update
-apt-get -y upgrade
 apt-get -y install nginx
 service nginx start
-echo "Hello World!" > /var/www/html/index.nginx-debian.html
-
+ufw allow 'Nginx HTTP'
+chown -R "$USER":"$USER" /var/www/html
+chmod -R 755 /var/www
+echo "Hello World!" > /var/www/html/index.html
