@@ -1,20 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# installs nginx and configure it to listens on port 80
 
-# Update the package list
-sudo apt-get update -y
-
-# Upgrade installed packages
-sudo apt-get upgrade -y
-
-# Install Nginx
-sudo apt-get install -y nginx
-
-# Start Nginx
+sudo apt -y update
+sudo apt -y upgrade
+sudo apt -y install nginx
+sudo chown -R ubuntu:ubuntu /var/www
+echo "Hello World!" > /var/www/html/index.html
 sudo service nginx start
-
-# Create a basic HTML file with "Hello World!" content
-echo "Hello World!" | sudo tee /var/www/html/index.html
-
-# Restart Nginx to apply changes
-sudo service nginx restart
-
