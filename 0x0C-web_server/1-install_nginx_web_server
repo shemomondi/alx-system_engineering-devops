@@ -1,11 +1,17 @@
-#!/usr/bin/env bash
-# Installs a webserver, nginx.
-#!/usit must return a page that contains the string `Hello World!`
+#!/bin/bash
 
-apt-get -y update
-apt-get -y install nginx
-service nginx start
-ufw allow 'Nginx HTTP'
-chown -R "$USER":"$USER" /var/www/html
-chmod -R 755 /var/www
-echo "Hello World!" > /var/www/html/index.html
+# Update the package list to ensure you have the latest information about available packages
+sudo apt-get update
+
+# Install Nginx
+sudo apt-get install -y nginx
+
+# Create a basic HTML page with the content "Hello World!"
+echo "Hello World!" | sudo tee /var/www/html/index.html
+
+# Verify that Nginx is listening on port 80
+netstat -tuln | grep 80
+
+# Restart Nginx (you can't use systemctl, so we'll use the init.d script)
+sudo service nginx restart
+
