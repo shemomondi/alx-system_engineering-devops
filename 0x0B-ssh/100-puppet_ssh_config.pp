@@ -1,4 +1,5 @@
-# Ensure SSH client uses the specified private key
+#!/usr/bin/env bash
+#using Puppet to make changes to our configuration file
 class { 'stdlib':
   before => File_line['Declare identity file'],
 }
@@ -10,7 +11,6 @@ file_line { 'Declare identity file':
   ensure => present,
 }
 
-# Ensure SSH client refuses to authenticate using a password
 file_line { 'Turn off passwd auth':
   path   => '/etc/ssh/ssh_config',  # Absolute path
   line   => '    PasswordAuthentication no',
