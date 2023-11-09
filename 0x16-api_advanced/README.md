@@ -1,13 +1,5 @@
 # Project Name.
 **0x16. API advanced**
-
-## Author's Details.
-Name: *Wendy Munyasi.*
-
-Email: *wendymunyasi@gmail.com*
-
-Tel:*+254707240068.*
-
 ##  Requirements
 
 *   Allowed editors: `vi`, `vim`, `emacs`.
@@ -110,6 +102,4 @@ How to sort a dictionary by value.
   ```
 ---
 
-## Collaborate
 
-To collaborate, reach me through my email address wendymunyasi@gmail.com.
